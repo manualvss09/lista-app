@@ -15,12 +15,12 @@ export default function Home() {
         <CardAluno/>
      </div>
      <div>
-      <h2 className="text-xl font-bold text-pink-300">Turma 2026</h2>
+      <h2 className="text-xl font-bold text-green-400">Turma 2026</h2>
     </div>
     <div>
-      <h1 className="text-xl font-bold text-pink-300">Mural da turma</h1>
+      <h1 className="text-xl font-bold text-green-300">Mural da turma</h1>
       <h5>Ana Carolina</h5>
-      <h5>Manoela</h5>
+      <h5>Manuella</h5>
       <h5>Pedro</h5>
       <h5>Elisa</h5>
     </div>
