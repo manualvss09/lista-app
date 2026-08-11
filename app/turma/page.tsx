@@ -7,7 +7,7 @@ import ListaGenerica from "@/components/ListaGenerica";
 import TabelaAlunos from "@/components/TabelaAlunos";
 import Contador from "@/components/Contador";
 
-export default function Home() {
+export default function turma() {
   const alunosTeste = [
     { id: 101, nome: "Lina Ana", curso: "Engenharia de Software" },
     { id: 102, nome: "João Silva", curso: "Ciência da Computação" },
