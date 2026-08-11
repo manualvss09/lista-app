@@ -1,36 +1,30 @@
-interface CardAlunoProps {
-  nome: string;
-  cargo: string;
-  periodo: string;
-  ativo: boolean;
-  vip: boolean;
-  habilidades: string[];
-}
-type Aluno = { id: number; nome: string; curso: string }
+type Aluno = { id: number; nome: string; curso: string };
 
 type Props = {
-  alunos: Aluno[]
-}
+  alunos: Aluno[];
+};
 
 export default function TabelaAlunos({ alunos }: Props) {
   return (
-    <table className="w-full border-collapse border border-gray-300">
-      <thead className="bg-gray-100">
-        <tr>
-          <th className="border border-gray-300 p-2">ID</th>
-          <th className="border border-gray-300 p-2">Nome</th>
-          <th className="border border-gray-300 p-2">Curso</th>
-        </tr>
-      </thead>
-      <tbody>
-        {alunos.map(aluno => (
-          <tr key={aluno.id} className="text-center hover:bg-gray-50">
-            <td className="border border-gray-300 p-2">{aluno.id}</td>
-            <td className="border border-gray-300 p-2">{aluno.nome}</td>
-            <td className="border border-gray-300 p-2">{aluno.curso}</td>
+    <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+      <table className="min-w-full divide-y divide-slate-200">
+        <thead className="bg-slate-50">
+          <tr>
+            <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">ID</th>
+            <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Nome</th>
+            <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Curso</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
-  )
+        </thead>
+        <tbody className="divide-y divide-slate-100 bg-white">
+          {alunos.map((aluno) => (
+            <tr key={aluno.id} className="transition hover:bg-slate-50">
+              <td className="px-4 py-3 text-sm text-slate-600">{aluno.id}</td>
+              <td className="px-4 py-3 text-sm font-medium text-slate-800">{aluno.nome}</td>
+              <td className="px-4 py-3 text-sm text-slate-600">{aluno.curso}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 }
