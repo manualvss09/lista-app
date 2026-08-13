@@ -6,7 +6,8 @@ import Rodape from "@/components/Rodape";
 import ListaGenerica from "@/components/ListaGenerica";
 import TabelaAlunos from "@/components/TabelaAlunos";
 import Contador from "@/components/Contador";
-import MatriculaCompleta from "@/components/MatriculaC";
+import Toggle from "@/components/Toggle";
+import PageContainer from "@/components/PageContainer";
 
 export default function turma() {
   const alunosTeste = [
@@ -16,11 +17,10 @@ export default function turma() {
   ];
 
   return (
-    
+
     <main className="min-h-screen bg-transparent">
       <Header />
-<MatriculaCompleta/>
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-8 sm:px-6 lg:px-8">
+      <PageContainer>
         <section className="rounded-3xl border border-slate-200/80 bg-white/80 p-6 shadow-lg shadow-slate-200/70 backdrop-blur">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
             <div>
@@ -44,6 +44,9 @@ export default function turma() {
             <h3 className="text-lg font-semibold text-slate-900">Mural da turma</h3>
             <div className="mt-4">
               <Contador />
+              <div className="mt-4">
+                <Toggle />
+              </div>
             </div>
           </section>
         </div>
@@ -70,7 +73,7 @@ export default function turma() {
             <TabelaAlunos alunos={alunosTeste} />
           </div>
         </section>
-      </div>
+      </PageContainer>
 
       <Rodape />
     </main>

@@ -10,6 +10,7 @@ import CardAluno from "@/components/CardAluno";
 import Toggle from "@/components/Toggle";
 import Saudacao from "@/components/Saudacao";
 import Input from "@/components/Input";
+import PageContainer from "@/components/PageContainer";
 
 export default function Home() {
   const alunosTeste = [
@@ -22,18 +23,12 @@ export default function Home() {
     <main className="min-h-screen bg-transparent">
       <Header />
 
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-8 sm:px-6 lg:px-8">
+      <PageContainer>
         <section className="rounded-3xl border border-slate-200/80 bg-white/80 p-6 shadow-lg shadow-slate-200/70 backdrop-blur sm:p-8">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-rose-500">Painel da turma</p>
-              <h2 className="mt-2 text-3xl font-semibold text-slate-900">Componentes interativos com visual moderno</h2>
-              <p className="mt-3 max-w-2xl text-sm text-slate-600 sm:text-base">
-                Uma coleção de exemplos com cards, listas, tabela e controles para praticar React e Next.js com uma interface mais bonita.
-              </p>
-            </div>
-            <div className="rounded-2xl bg-rose-50 px-4 py-3 text-sm font-medium text-rose-700">
-              ✨ Estilo reforçado para a experiência visual
+              <h2 className="mt-2 text-3xl font-semibold text-slate-900">Turma </h2>
             </div>
           </div>
         </section>
@@ -92,7 +87,7 @@ export default function Home() {
         <section className="rounded-3xl border border-slate-200/80 bg-white/80 p-6 shadow-sm backdrop-blur">
           <Contador alunosMatriculados={11} />
         </section>
-      </div>
+      </PageContainer>
 
       <Rodape />
     </main>
