@@ -1,9 +1,10 @@
-'use client';
+"use client";
 
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, FormEvent } from "react";
 import Input from "@/components/Input";
 import Contador from "@/components/Contador";
 import CardAluno from "@/components/CardAluno";
+import Caixa from "@/components/Caixa";
 
 type Aluno = {
   id: number;
@@ -36,17 +37,7 @@ export default function MatriculaCompleta() {
   const [erro, setErro] = useState<string>(""); 
 
   
-  const aoMudar = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value, type } = e.target;
-    const checked = (e.target as HTMLInputElement).checked;
-    if (type === "checkbox") {
-      setForm({ ...form, [name]: checked });
-    } else if (type === "number") {
-      setForm({ ...form, [name]: Number(value) });
-    } else {
-      setForm({ ...form, [name]: value });
-    }
-  };
+  // form state managed via controlled `Input` components
 
 
   const enviar = (e: FormEvent) => {
@@ -77,7 +68,7 @@ export default function MatriculaCompleta() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 space-y-6 bg-white rounded-2xl shadow-lg border border-slate-200">
+    <Caixa className="max-w-2xl mx-auto p-6 space-y-6 bg-white rounded-2xl shadow-lg border border-slate-200">
       <h2 className="text-2xl font-bold text-center text-slate-800">Matrícula Completa </h2>
 
       <form onSubmit={enviar} className="space-y-4">
@@ -141,6 +132,6 @@ export default function MatriculaCompleta() {
           </div>
         )}
       </div>
-    </div>
+    </Caixa>
   );
 }

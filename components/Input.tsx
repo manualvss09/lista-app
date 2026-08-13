@@ -16,7 +16,7 @@ type InputProps = {
 export default function Input(props: InputProps = {}) {
   const { id, label, value, onChange, placeholder, type = "text", options, checked } = props;
 
-  // If value/onChange provided, render a single controlled field (reusable)
+
   const isControlled = typeof value !== "undefined" && typeof onChange === "function";
 
   if (isControlled) {
@@ -54,7 +54,6 @@ export default function Input(props: InputProps = {}) {
     );
   }
 
-  // Fallback: original composite component behavior (unchanged when used without props)
   const [texto, setTexto] = useState<string>("");
   const [form, setForm] = useState<{ nome: string; curso: string }>({ nome: "", curso: "" });
   const handleSubmissao = (e: React.FormEvent) => {
