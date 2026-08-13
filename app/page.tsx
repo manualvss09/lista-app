@@ -15,8 +15,8 @@ import PageContainer from "@/components/PageContainer";
 export default function Home() {
   const alunosTeste = [
     { id: 101, nome: "Lina Ana", curso: "Engenharia de Software" },
-    { id: 102, nome: "João Silva", curso: "Ciência da Computação" },
-    { id: 103, nome: "Maria Santos", curso: "Sistemas de Informação" },
+    { id: 102, nome: "Manu Alves", curso: "Ciência da Computação" },
+    { id: 103, nome: "Pedro Kawakami", curso: "Sistemas de Informação" },
   ];
 
   return (
